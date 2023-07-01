@@ -3,5 +3,5 @@ from .models import Usuario
 from .serializers import UsuarioSerializer
 
 class UsuarioViewSet(ModelViewSet):
-    queryset = Usuario.objets.all()
+    queryset = Usuario.objects.all()
     serializer_class = UsuarioSerializer
