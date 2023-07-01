@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+
+<main>
+    <div>
+        <h1>Estas seguro que deseas borrar el usuario?</h1>
+        <h2>{{usuario.nombre}}</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div>{{form.as_p}}</div>
+            <input type="submit" value="{{ tipo }}" />
+        </form>
+
+        <a href="{% url 'usuarios:all' %}">Cancelar</a>
+    </div>
+</main>
+
+{% endblock %}

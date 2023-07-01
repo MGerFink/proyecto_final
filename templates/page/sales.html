@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+    <main>
+    <hr/>
+    <center>
+       
+         <div id="ProdApp">
+            <button v-on:click="searchapi"> Desde API REST</button>
+            <button v-on:click="searchlocal"> Desde API LOCAL</button>
+            <hr>
+            <div id="Gsales">
+            <div v-if="produs !== null">
+            <div v-for="p in produs">
+                <h3>{{p.Descrip}}</h3>
+                 <div>
+                    <img :src="p.URLimg" :alt="p.Descrip"/>
+                     <p>$ {{p.Price}}</p>
+                        <div v-if="p.Stock!=0">
+                            <button class="buybut">Comprar</button>
+                        </div>
+                        <div v-else><p>SIN STOCK!</p></div>
+                </div>
+             </div>
+             
+            </div>
+        </div>
+    </center>
+        
+        </main>
+    <hr>
+    
+        <footer>
+        
+        <div class="redes">
+            <a href="https://www.instagram.com/"> <img src="../media/pngegg.png" alt="Instagram" width="50px" ></a>
+            <h6>Encontranos en nuestras redes</h6>
+            <a href="https://web.whatsapp.com/"> <img src="../media/whatsapp.png" alt="Whatsapp" width="40px" ></a>
+        </div>
+{% endblock %}

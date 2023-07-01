@@ -1,0 +1,36 @@
+{% exends 'base.html' %}
+
+{% block content %}
+
+<main>
+    <div>
+        <h1>TODOS LOS USUARIOS</h1>
+        <h2><a href="{% url 'usuarios:create' %}">CREAR USUARIO</a></h2>
+        
+        {% for usuario in usuario_lis%}
+        <div class="list">
+            <span>
+                <p{{forloop.counter}}</p>
+            </span>
+            <span>
+                <p>{{usuario.nombre}}</p>            
+            </span>
+            <span>
+                <label for="">Detalle: </label>
+                <a href="{% url 'usuarios:detail' usuario.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Editar:</label>
+                <a href="{% url 'usuarios:update' usuario.id %}">+</a>
+            </span>
+            <span>
+                <label for="">Borrar:</label>
+                <a href="{% url 'usuarios:delete' usuario.id %}">+</a>
+            </span>
+        </div>
+
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
+
