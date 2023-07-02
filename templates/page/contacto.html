@@ -1,6 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <main>
-    <img id="plantas" src="../media/plantas_agua.jpg" alt="">
+    <img id="plantas" src="{% static './media/plantas_agua.jpg' %}" alt=""/>
 
     <div class="formContainer">
         <form action="./show_data.html" target="_blank">

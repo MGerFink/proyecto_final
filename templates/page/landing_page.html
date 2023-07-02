@@ -1,14 +1,14 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <br>
 <section>
-    <img src="./media/slider/hidro1.jpg" alt="">
-    <img src="./media/slider/hidro2.jpg" alt="">
-    <img src="./media/slider/hidro3.jpg" alt="">
-    <img src="./media/slider/hidro4.jpg" alt="">
-    <img src="./media/slider/hidro5.jpg" alt="">
-    <img src="./media/slider/hidro6.jpg" alt="">
-    <img src="./media/slider/hidro7.jpg" alt="">
-    <img src="./media/slider/hidro8.jpg" alt="">
+    <img src="{% static './media/slider/hidro1.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro2.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro3.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro4.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro5.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro6.jpg' %}" alt="">
+    <img src="{% static '/media/slider/hidro7.jpg' %}" alt="">
+    <img src="{% static './media/slider/hidro8.jpg' %}" alt="">
 
 </section>
 
